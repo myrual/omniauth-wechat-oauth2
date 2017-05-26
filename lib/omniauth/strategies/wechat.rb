@@ -65,7 +65,7 @@ module OmniAuth
           'code' => request.params['code'],
           'grant_type' => 'authorization_code'
           }.merge(token_params.to_hash(symbolize_keys: true))
-        client.get_token(params, deep_symbolize(options.auth_token_params || {}))
+        client.get_token(params, deep_symbolize(options.auth_token_params))
       end
     end
   end
